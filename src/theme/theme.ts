@@ -9,12 +9,12 @@ const getDesignTokens = (mode: PaletteMode) => ({
       ? {
         // primary: { main: '#ae0' },
         // secondary: { main: '#ae0' }, 
-        // background: { default: '#ffffff' },
+        background: { default: '#ffffff', code: '#d5d5d5' },
         // text: { primary: '#000000', secondary: '#757575' }, 
       }
       : {
         primary: { main: red[500] },
-        background: { default: 'rgb(255,0,0)', paper: '#1e1e1e' },
+        background: { default: 'rgb(255,0,0)', paper: '#1e1e1e', code:'#ae0' },
         text: { primary: '#ffffff', secondary: '#aaaaaa' },
         info: { main: '#ae0' },
       }),
@@ -30,9 +30,8 @@ const getDesignTokens = (mode: PaletteMode) => ({
     MuiDivider: {
       styleOverrides: {
         root: {
-          backgroundColor:'#d5d5d5',
-          height:'2px',
-          margin: '8px'
+          backgroundColor:'#fcfcfd',
+          margin: '8px 0'
         }
       }
     },
@@ -44,6 +43,7 @@ const getDesignTokens = (mode: PaletteMode) => ({
       fontSize: '2.5rem',
       fontWeight: '700',
       textAlign: 'center',
+      textDecoration: 'underline',
     },
     h2: {
       fontSize: '2.25rem',
