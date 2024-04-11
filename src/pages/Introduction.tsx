@@ -1,11 +1,10 @@
-// Home.tsx
 import { Box, List, ListItem, ListItemText, Typography } from "@mui/material";
 import React from "react";
 
-const Home: React.FC = () => {
+const Introduction: React.FC = () => {
   return (
-    <Box sx={{ padding: "16px 0" }}>
-      <Typography variant="h1" color="primary">
+    <Box>
+      <Typography gutterBottom variant="h1" color="primary">
         MUI + React
       </Typography>
       <Typography variant="body1">
@@ -59,4 +58,4 @@ const Home: React.FC = () => {
   );
 };
 
-export default Home;
+export default Introduction;

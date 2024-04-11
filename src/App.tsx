@@ -3,17 +3,14 @@ import { ThemeProvider, CssBaseline, createTheme, Container } from "@mui/materia
 import { useMediaQuery } from "@mui/material";
 import getDesignTokens from "./theme/theme";
 import { Route, Routes } from "react-router-dom";
-import Home from "./components/Home";
-import About from "./components/About";
 import Navbar from "./components/Navbar";
 import ComponentProps from "./pages/ComponentProps";
 import SXProps from "./pages/SXProps";
-import StyledComp from "./pages/StyledComp";
 import CSSFunctions from "./pages/CSSFunctions";
-import CSSStylesheet from "./pages/CSSStylesheet";
-import CSSModules from "./pages/CSSModules";
 import Theming from "./pages/Theming";
 import BestPractice from "./pages/BestPractice";
+import GettingStarted from "./pages/GettingStarted";
+import Introduction from "./pages/Introduction";
 
 const ColorModeContext = React.createContext({
   toggleColorMode: () => {},
@@ -40,16 +37,13 @@ const App: React.FC = () => {
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <Navbar mode={mode} toggleColorMode={toggleColorMode} />
-        <Container>
+        <Container sx={{ paddingTop: "16px" }}>
           <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="about" element={<About />} />
+            <Route path="/" element={<Introduction />} />
+            <Route path="getting-started" element={<GettingStarted />} />
             <Route path="component-props" element={<ComponentProps />} />
             <Route path="sx-props" element={<SXProps />} />
-            <Route path="styled-components" element={<StyledComp />} />
             <Route path="css-functions" element={<CSSFunctions />} />
-            <Route path="css-stylesheet" element={<CSSStylesheet />} />
-            <Route path="css-modules" element={<CSSModules />} />
             <Route path="theming" element={<Theming />} />
             <Route path="best-practice" element={<BestPractice />} />
           </Routes>

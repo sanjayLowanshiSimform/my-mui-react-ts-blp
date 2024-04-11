@@ -35,7 +35,7 @@ const Navbar: React.FC<NavbarProps> = ({ mode, toggleColorMode }) => {
           <Button component={Link} to="/" color="inherit" sx={{ mr: 2 }}>
             Introduction
           </Button>
-          <Button component={Link} to="/about" color="inherit" sx={{ mr: 2 }}>
+          <Button component={Link} to="/getting-started" color="inherit" sx={{ mr: 2 }}>
             Getting Started
           </Button>
           <Button
@@ -67,30 +67,13 @@ const Navbar: React.FC<NavbarProps> = ({ mode, toggleColorMode }) => {
             </MenuItem>
             <MenuItem
               component={Link}
-              to="/styled-component"
-              onClick={handleClose}
-            >
-              3. Styled Component
-            </MenuItem>
-            <MenuItem
-              component={Link}
               to="/css-functions"
               onClick={handleClose}
             >
-              4. CSS Function
-            </MenuItem>
-            <MenuItem
-              component={Link}
-              to="/css-stylesheet"
-              onClick={handleClose}
-            >
-              5. CSS Stylesheet
-            </MenuItem>
-            <MenuItem component={Link} to="/css-modules" onClick={handleClose}>
-              6. CSS Modules
+              3. CSS Function
             </MenuItem>
             <MenuItem component={Link} to="/theming" onClick={handleClose}>
-              7. Theming
+              4. Theming
             </MenuItem>
             <MenuItem
               component={Link}
