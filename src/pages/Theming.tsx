@@ -1,15 +1,17 @@
 import {
   Box,
   Divider,
+  Grid,
   List,
   ListItem,
   ListItemButton,
-  ListItemText,
   Paper,
   Stack,
   Typography,
 } from "@mui/material";
 import React from "react";
+import GridItems from "../components/Examples/GridItems";
+
 
 const Theming: React.FC = () => {
   return (
@@ -46,86 +48,106 @@ const Theming: React.FC = () => {
         </Typography>
         <List>
           <ListItem divider>
-            <ListItemButton >palette</ListItemButton >
+            <ListItemButton>palette</ListItemButton>
           </ListItem>
           <ListItem divider>
-            <ListItemButton >Typography</ListItemButton >
+            <ListItemButton>Typography</ListItemButton>
           </ListItem>
           <ListItem divider>
-            <ListItemButton >Spacing</ListItemButton >
+            <ListItemButton>Spacing</ListItemButton>
           </ListItem>
           <ListItem divider>
-            <ListItemButton >Breakpoints</ListItemButton >
+            <ListItemButton>Breakpoints</ListItemButton>
           </ListItem>
           <ListItem divider>
-            <ListItemButton >Z-Index</ListItemButton >
+            <ListItemButton>Z-Index</ListItemButton>
           </ListItem>
           <ListItem divider>
-            <ListItemButton >Transition</ListItemButton >
+            <ListItemButton>Transition</ListItemButton>
           </ListItem>
           <ListItem divider>
-            <ListItemButton >Components</ListItemButton >
+            <ListItemButton>Components</ListItemButton>
           </ListItem>
         </List>
       </Box>
-        <Typography gutterBottom variant="h3">
-          Typography
-        </Typography>
+      <Typography gutterBottom variant="h3">
+        Typography
+      </Typography>
       <Paper elevation={3} square={false}>
-      <Stack>
-        <Typography paddingX={2} paddingY={1} variant="h1">
-          h1, 2.5rem | The quick brown fox
-        </Typography>
-        <Divider textAlign="center"></Divider>
-        <Typography paddingX={2} paddingY={1} variant="h2">
-          h2, 2.25rem | The quick brown fox
-        </Typography>
-        <Divider textAlign="center"></Divider>
-        <Typography paddingX={2} paddingY={1} variant="h3">
-          h3, 2rem | The quick brown fox
-        </Typography>
-        <Divider textAlign="center"></Divider>
-        <Typography paddingX={2} paddingY={1} variant="h4">
-          h4, 1.75rem | The quick brown fox
-        </Typography>
-        <Divider textAlign="center"></Divider>
-        <Typography paddingX={2} paddingY={1} variant="h5">
-          h5, 1.5rem | The quick brown fox
-        </Typography>
-        <Divider textAlign="center"></Divider>
-        <Typography paddingX={2} paddingY={1} variant="h6">
-          h6, 1.25rem | The quick brown fox
-        </Typography>
-        <Divider textAlign="center"></Divider>
-        <Typography paddingX={2} paddingY={1} variant="subtitle1">
-          subtitle, 1rem | The quick brown fox
-        </Typography>
-        <Divider textAlign="center"></Divider>
-        <Typography paddingX={2} paddingY={1} variant="subtitle2">
-          subtitle2, 0.875rem | The quick brown fox
-        </Typography>
-        <Divider textAlign="center"></Divider>
-        <Typography paddingX={2} paddingY={1} variant="body1">
-          body1, 1rem | The quick brown fox
-        </Typography>
-        <Divider textAlign="center"></Divider>
-        <Typography paddingX={2} paddingY={1} variant="body2">
-          body2, 0.875rem | The quick brown fox
-        </Typography>
-        <Divider textAlign="center"></Divider>
-        <Typography paddingX={2} paddingY={1} variant="button">
-          button, 1rem | The quick brown fox
-        </Typography>
-        <Divider textAlign="center"></Divider>
-        <Typography paddingX={2} paddingY={1} variant="caption">
-          caption, 0.75rem | The quick brown fox
-        </Typography>
-        <Divider textAlign="center"></Divider>
-        <Typography paddingX={2} paddingY={1} variant="overline">
-          overline, 0.625rem | The quick brown fox
-        </Typography>
-      </Stack>
+        <Stack>
+          <Typography paddingX={2} paddingY={1} variant="h1">
+            h1, 2.5rem | The quick brown fox
+          </Typography>
+          <Divider textAlign="center"></Divider>
+          <Typography paddingX={2} paddingY={1} variant="h2">
+            h2, 2.25rem | The quick brown fox
+          </Typography>
+          <Divider textAlign="center"></Divider>
+          <Typography paddingX={2} paddingY={1} variant="h3">
+            h3, 2rem | The quick brown fox
+          </Typography>
+          <Divider textAlign="center"></Divider>
+          <Typography paddingX={2} paddingY={1} variant="h4">
+            h4, 1.75rem | The quick brown fox
+          </Typography>
+          <Divider textAlign="center"></Divider>
+          <Typography paddingX={2} paddingY={1} variant="h5">
+            h5, 1.5rem | The quick brown fox
+          </Typography>
+          <Divider textAlign="center"></Divider>
+          <Typography paddingX={2} paddingY={1} variant="h6">
+            h6, 1.25rem | The quick brown fox
+          </Typography>
+          <Divider textAlign="center"></Divider>
+          <Typography paddingX={2} paddingY={1} variant="subtitle1">
+            subtitle, 1rem | The quick brown fox
+          </Typography>
+          <Divider textAlign="center"></Divider>
+          <Typography paddingX={2} paddingY={1} variant="subtitle2">
+            subtitle2, 0.875rem | The quick brown fox
+          </Typography>
+          <Divider textAlign="center"></Divider>
+          <Typography paddingX={2} paddingY={1} variant="body1">
+            body1, 1rem | The quick brown fox
+          </Typography>
+          <Divider textAlign="center"></Divider>
+          <Typography paddingX={2} paddingY={1} variant="body2">
+            body2, 0.875rem | The quick brown fox
+          </Typography>
+          <Divider textAlign="center"></Divider>
+          <Typography paddingX={2} paddingY={1} variant="button">
+            button, 1rem | The quick brown fox
+          </Typography>
+          <Divider textAlign="center"></Divider>
+          <Typography paddingX={2} paddingY={1} variant="caption">
+            caption, 0.75rem | The quick brown fox
+          </Typography>
+          <Divider textAlign="center"></Divider>
+          <Typography paddingX={2} paddingY={1} variant="overline">
+            overline, 0.625rem | The quick brown fox
+          </Typography>
+        </Stack>
       </Paper>
+
+      <Typography gutterBottom variant="h3" mt={3} mb={3}>
+        BreakPoints
+      </Typography>
+      <Box sx={{ flexGrow: 1 }} mb={3}>
+      <Grid container spacing={2}>
+        <Grid item xs={6} md={8}>
+          <GridItems desc="xs={6} md={8}" />
+        </Grid>
+        <Grid item xs={6} md={4}>
+          <GridItems desc="xs={6} md={4}" />
+        </Grid>
+        <Grid item xs={6} md={4}>
+          <GridItems desc="xs={6} md={4}" />
+        </Grid>
+        <Grid item xs={6} md={8}>
+          <GridItems desc="xs={6} md={8}" />
+        </Grid>
+      </Grid>
+    </Box>
     </>
   );
 };

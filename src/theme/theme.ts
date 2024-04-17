@@ -1,5 +1,5 @@
 import { PaletteMode } from '@mui/material';
-import { red } from '@mui/material/colors';
+import { themes } from './themes';
 
 
 const getDesignTokens = (mode: PaletteMode) => ({
@@ -7,34 +7,23 @@ const getDesignTokens = (mode: PaletteMode) => ({
     mode,
     ...(mode === 'light'
       ? {
-        // primary: { main: '#ae0' },
-        // secondary: { main: '#ae0' }, 
-        background: { default: '#ffffff', code: '#d5d5d5' },
-        // text: { primary: '#000000', secondary: '#757575' }, 
+        primary: { main: `rgb(${themes.default['primary-500']})`, dark: `rgb(${themes.default['primary-600']})`, contrastText: `rgb(${themes.default['textColor-900']})` },
+        secondary: { main: `rgb(${themes.default['secondary-500']})`, dark: `rgb(${themes.default['secondary-600']})`, contrastText: `rgb(${themes.default['textColor-500']})` },
+        error: { main: `rgb(${themes.default['error-500']})`, dark: `rgb(${themes.default['error-600']})`, contrastText: `rgb(${themes.default['textColor-500']})` },
+        warning: { main: `rgb(${themes.default['warning-500']})`, dark: `rgb(${themes.default['warning-600']})`, contrastText: `rgb(${themes.default['textColor-500']})` },
+        info: { main: `rgb(${themes.default['info-500']})`, dark: `rgb(${themes.default['info-600']})`, contrastText: `rgb(${themes.default['textColor-500']})` },
+        success: { main: `rgb(${themes.default['success-500']})`, dark: `rgb(${themes.default['success-600']})`, contrastText: `rgb(${themes.default['textColor-500']})` },
+        background: { default: `rgb(${themes.default['bgColor-500']})`, code: `rgb(${themes.default['bgColor-900']})` },
       }
       : {
-        primary: { main: red[500] },
-        background: { default: 'rgb(255,0,0)', paper: '#1e1e1e', code:'#ae0' },
-        text: { primary: '#ffffff', secondary: '#aaaaaa' },
-        info: { main: '#ae0' },
+        primary: { main: `rgb(${themes.dark['primary-500']})`, dark: `rgb(${themes.dark['primary-600']})`, contrastText: `rgb(${themes.dark['textColor-500']})` },
+        secondary: { main: `rgb(${themes.dark['secondary-500']})`, dark: `rgb(${themes.dark['secondary-600']})`, contrastText: `rgb(${themes.dark['textColor-500']})` },
+        error: { main: `rgb(${themes.dark['error-500']})`, dark: `rgb(${themes.dark['error-600']})`, contrastText: `rgb(${themes.dark['textColor-500']})` },
+        warning: { main: `rgb(${themes.dark['warning-500']})`, dark: `rgb(${themes.dark['warning-600']})`, contrastText: `rgb(${themes.dark['textColor-500']})` },
+        info: { main: `rgb(${themes.dark['info-500']})`, dark: `rgb(${themes.dark['info-600']})`, contrastText: `rgb(${themes.dark['textColor-500']})` },
+        success: { main: `rgb(${themes.dark['success-500']})`, dark: `rgb(${themes.dark['success-600']})`, contrastText: `rgb(${themes.dark['textColor-500']})` },
+        background: { default: `rgb(${themes.dark['bgColor-500']})`, code: `rgb(${themes.dark['bgColor-200']})` },
       }),
-  },
-  components: {
-    MuiButton: {
-      styleOverrides: {
-        root: {
-          // textTransform: 'capitalize',
-        }
-      }
-    },
-    MuiDivider: {
-      styleOverrides: {
-        root: {
-          backgroundColor:'#fcfcfd',
-          margin: '8px 0'
-        }
-      }
-    },
   },
   typography: {
     fontSize: 12,
@@ -89,7 +78,39 @@ const getDesignTokens = (mode: PaletteMode) => ({
       fontSize: '0.625rem',
       textTransform: 'uppercase',
     },
-  }
+  },
+  spacing: [0, 4, 8, 16, 32, 64], 
+  breakpoints: {
+    values: {
+      xs: 0,
+      sm: 600,
+      md: 900,
+      lg: 1200,
+      xl: 1536,
+    },
+  },
+  components: {
+    MuiButton: {
+      defaultProps: {
+        // disableRipple: true,
+        // disableElevation: true,
+      },
+      styleOverrides: {
+        root: {
+          // color: "#ae0",
+          // padding: "32px"
+        }
+      }
+    },
+    MuiDivider: {
+      styleOverrides: {
+        root: {
+          backgroundColor: '#fcfcfd',
+          margin: '8px 0'
+        }
+      }
+    },
+  },
 });
 
 export default getDesignTokens;
