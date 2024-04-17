@@ -1,5 +1,6 @@
 import { Box, Button, Stack, Typography } from "@mui/material";
 import { deepOrange, pink } from "@mui/material/colors";
+import { themes } from "../theme/themes";
 
 const SXProps = () => {
   return (
@@ -35,11 +36,12 @@ const SXProps = () => {
         <Button
           variant="contained"
           sx={{
-            bgcolor: pink[800],
+            bgcolor: `rgb(${themes.default['primary-500']})`,
+            color:`rgb(${themes.dark['textColor-500']})`,
             textTransform: "uppercase",
             borderRadius: "16px",
             "&:hover": {
-              bgcolor: deepOrange[600],
+              bgcolor: `rgb(${themes.dark['success-400']})`,
               transform: "scale(1.2)",
             },
           }}

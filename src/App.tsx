@@ -37,7 +37,7 @@ const App: React.FC = () => {
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <Navbar mode={mode} toggleColorMode={toggleColorMode} />
-        <Container sx={{ paddingTop: "16px" }}>
+        <Container sx={{ paddingTop: "16px" }} >
           <Routes>
             <Route path="/" element={<Introduction />} />
             <Route path="getting-started" element={<GettingStarted />} />
